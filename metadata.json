@@ -1,0 +1,8 @@
+{
+  "name": "TaskAdjust",
+  "description": "Internal financial engine to calculate contract cancellations, retainer prorations, client refunds, and billable overtime with automated invoice and spreadsheet exports.",
+  "requestFramePermissions": [],
+  "majorCapabilities": [
+    "MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"
+  ]
+}

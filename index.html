@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" type="image/svg+xml" href="./favicon.svg" />
+    <link rel="icon" href="./favicon.ico" />
+    <link rel="apple-touch-icon" href="./favicon.svg" />
+    <title>TaskAdjust • Interactive Settlement, Refund & Overtime Engine</title>
+    <meta name="description" content="TaskAdjust - Interactive financial engine to calculate contract cancellations, retainer prorations, client refunds, and billable overtime." />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,500;0,9..40,600;0,9..40,700;1,9..40,500;1,9..40,600;1,9..40,700&family=Inter:ital,opsz,wght@0,14..32,400;0,14..32,500;0,14..32,600;1,14..32,400;1,14..32,500;1,14..32,600&family=Plus+Jakarta+Sans:ital,wght@0,600;0,700;0,800;1,600;1,700;1,800&display=swap" rel="stylesheet">
+    <meta property="og:title" content="TaskAdjust • Interactive Settlement, Refund & Overtime Engine" />
+    <meta property="og:description" content="Interactive financial engine to calculate contract cancellations, retainer prorations, client refunds, and billable overtime." />
+    <meta property="og:type" content="website" />
+    <script>
+      (function() {
+        try {
+          var saved = localStorage.getItem('taskadjust_theme');
+          var isDark = saved === 'dark' || ((!saved || saved === 'auto') && window.matchMedia('(prefers-color-scheme: dark)').matches);
+          if (isDark) {
+            document.documentElement.classList.add('dark');
+            document.documentElement.style.colorScheme = 'dark';
+          } else {
+            document.documentElement.classList.remove('dark');
+            document.documentElement.style.colorScheme = 'light';
+          }
+        } catch (e) {}
+      })();
+    </script>
+  </head>
+  <body class="font-sans antialiased bg-[#F8F9FA] text-[#0A2A5E] dark:bg-[#061325] dark:text-[#E2E8F0] selection:bg-[#00B2FF]/20 transition-colors duration-200">
+    <div id="root"></div>
+    <script type="module" src="/src/main.tsx"></script>
+  </body>
+</html>
+
