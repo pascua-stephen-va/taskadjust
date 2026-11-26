@@ -86,7 +86,7 @@ function loadSavedDraft(): SavedDraft {
 }
 
 export default function App() {
-  const { preference, systemTheme, setThemePreference } = useTheme();
+  const { theme, isDark, isAuto, preference, systemTheme, setThemePreference, toggleTheme, resetToSystem } = useTheme();
   const [isTourOpen, setIsTourOpen] = useState<boolean>(false);
   const [isFirstTimeTour, setIsFirstTimeTour] = useState<boolean>(false);
   const [tourOpenedFromTab, setTourOpenedFromTab] = useState<'calculator' | 'scenarios'>('calculator');
@@ -237,10 +237,15 @@ export default function App() {
           {/* Right Action Tools: Theme Toggle & Tour Guide */}
           <div className="flex items-center gap-2 sm:gap-2.5 shrink-0">
             
-            {/* Segmented Light / Dark / Auto Theme Toggle */}
-            <ThemeToggle 
+            {/* Tactile Theme Toggle with 180deg Animated Sun/Moon & OS Auto Sync */}
+            <ThemeToggle
+              theme={theme}
+              isDark={isDark}
+              isAuto={isAuto}
               preference={preference}
               systemTheme={systemTheme}
+              onToggle={toggleTheme}
+              onResetToSystem={resetToSystem}
               onChange={setThemePreference}
             />
 
